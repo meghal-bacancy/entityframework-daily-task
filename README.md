@@ -5,4 +5,4 @@ Assignment 1: Implement different EF Core setup methods in a single .NET Core We
 3. Environment-Based Connection String Selection
 
 ![day1_1](https://github.com/meghal-bacancy/entityframework-daily-task/blob/master/img/day1.png)
-![day1_1](/img/day.png)
+![day1_1](/img/day1.png)
