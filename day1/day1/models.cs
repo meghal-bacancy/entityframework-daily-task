@@ -1,7 +1,9 @@
 namespace day1
 {
-    public class WeatherForecast
+    public class temp
     {
+        public int Id { get; set; }  // Define a primary key
+
         public DateOnly Date { get; set; }
 
         public int TemperatureC { get; set; }
