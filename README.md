@@ -4,4 +4,4 @@ Assignment 1: Implement different EF Core setup methods in a single .NET Core We
 2. Using OnConfiguring() for DbContext Setup (No DI)
 3. Environment-Based Connection String Selection
 
-![day1_1](/img/day1_1.png)
+![day1_1](blob/master/img/day1.png)
