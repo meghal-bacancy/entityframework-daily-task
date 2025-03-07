@@ -5,3 +5,6 @@ Assignment 1: Implement different EF Core setup methods in a single .NET Core We
 3. Environment-Based Connection String Selection
 
 ![day1_1](/img/day1_1.png)
+
+Assignment 2: Implement different ways to configure DbContext using Dependency Injection (DI) in a .NET Core Web API project and analyze the impact of using Singleton, Scoped, and Transient lifetimes.
+![day1_2](/img/day1_2.png)
