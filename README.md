@@ -14,15 +14,14 @@
 Project Setup
 1. Create a .NET Core Web API project.
 2. Configure Entity Framework Core and define a DbContext with at least three related entities (Schema choice will be yours) :
-○ Customer (One-to-Many → A customer can have multiple orders).
-○ Order (Many-to-Many ↔ An order can contain multiple products, and a product can be in multiple orders).
-○ Product
+i. Customer (One-to-Many → A customer can have multiple orders).
+ii. Order (Many-to-Many ↔ An order can contain multiple products, and a product can be in multiple orders).
+ii. Product
 
 Define entity classes (models) and map them to database tables using both:
-● Data Annotations (attributes for defining primary keys, relationships, constraints, etc.).
-● Fluent API (override the OnModelCreating method in DbContext to configure relationships and constraints).
+1. Data Annotations (attributes for defining primary keys, relationships, constraints, etc.).
+2. Fluent API (override the OnModelCreating method in DbContext to configure relationships and constraints).
 Implement primary keys and composite keys where necessary.
-SQL Query Logging
-● Enable logging to capture and display the actual SQL queries executed by LINQ queries in the console or logs.
+SQL Query Logging: Enable logging to capture and display the actual SQL queries executed by LINQ queries in the console or logs.
 ![day2_1](/img/day2_1.png)
 
