@@ -1,8 +1,7 @@
 ﻿namespace day2.DTOs
 {
-    public class ProductDto
+    public class CustomerDTO
     {
         public string Name { get; set; }
-        public decimal Price { get; set; }
     }
 }

@@ -6,19 +6,6 @@ public class AppDbContext : DbContext
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
     }
-    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    //{
-    //    if (!optionsBuilder.IsConfigured) // Ensure options are only set if not already configured
-    //    {
-    //        optionsBuilder
-    //            .UseLoggerFactory(LoggerFactory.Create(builder =>
-    //            {
-    //                builder.AddConsole(); // Log SQL queries to the console
-    //            }))
-    //            .EnableSensitiveDataLogging() // Logs parameter values in queries (use only in development)
-    //            .EnableDetailedErrors(); // Provides detailed error messages
-    //    }
-    //}
 
     public DbSet<Customer> Customer { get; set; }
     public DbSet<Order> Order { get; set; }

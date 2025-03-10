@@ -9,6 +9,7 @@ namespace day2.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CustomerID { get; set; }
         public string Name { get; set; }
+        public bool isActive { get; set; }
 
         public List<Order> Orders { get; set; } = new();
     }
