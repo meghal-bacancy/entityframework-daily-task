@@ -1,0 +1,253 @@
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
+namespace day4.Migrations
+{
+    /// <inheritdoc />
+    public partial class _2migration : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.InsertData(
+                table: "Customer",
+                columns: new[] { "CustomerId", "CreatedDate", "Email", "Name" },
+                values: new object[,]
+                {
+                    { 1, new DateTime(2025, 3, 12, 9, 37, 7, 506, DateTimeKind.Utc).AddTicks(4195), "john@example.com", "John Doe" },
+                    { 2, new DateTime(2025, 3, 12, 9, 37, 7, 506, DateTimeKind.Utc).AddTicks(4315), "jane@example.com", "Jane Smith" },
+                    { 3, new DateTime(2025, 3, 12, 9, 37, 7, 506, DateTimeKind.Utc).AddTicks(4316), "alice@example.com", "Alice Brown" },
+                    { 4, new DateTime(2025, 3, 12, 9, 37, 7, 506, DateTimeKind.Utc).AddTicks(4317), "bob@example.com", "Bob White" },
+                    { 5, new DateTime(2025, 3, 12, 9, 37, 7, 506, DateTimeKind.Utc).AddTicks(4319), "charlie@example.com", "Charlie Green" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Product",
+                columns: new[] { "ProductId", "Name", "Price", "Stock" },
+                values: new object[,]
+                {
+                    { 1, "Laptop", 1000m, 10 },
+                    { 2, "Phone", 500m, 20 },
+                    { 3, "Tablet", 300m, 15 },
+                    { 4, "Monitor", 200m, 5 },
+                    { 5, "Keyboard", 50m, 25 },
+                    { 6, "Mouse", 30m, 30 },
+                    { 7, "Headphones", 80m, 10 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Order",
+                columns: new[] { "OrderId", "CustomerId", "IsDeleted", "OrderDate" },
+                values: new object[,]
+                {
+                    { 1, 1, false, new DateTime(2025, 3, 2, 9, 37, 7, 506, DateTimeKind.Utc).AddTicks(8895) },
+                    { 2, 2, false, new DateTime(2025, 3, 4, 9, 37, 7, 506, DateTimeKind.Utc).AddTicks(9251) },
+                    { 3, 3, true, new DateTime(2025, 3, 5, 9, 37, 7, 506, DateTimeKind.Utc).AddTicks(9254) },
+                    { 4, 4, false, new DateTime(2025, 3, 7, 9, 37, 7, 506, DateTimeKind.Utc).AddTicks(9255) },
+                    { 5, 5, false, new DateTime(2025, 3, 9, 9, 37, 7, 506, DateTimeKind.Utc).AddTicks(9257) },
+                    { 6, 1, false, new DateTime(2025, 3, 10, 9, 37, 7, 506, DateTimeKind.Utc).AddTicks(9259) },
+                    { 7, 2, false, new DateTime(2025, 3, 11, 9, 37, 7, 506, DateTimeKind.Utc).AddTicks(9260) }
+                });
+
+            migrationBuilder.InsertData(
+                table: "OrderProduct",
+                columns: new[] { "OrderProductId", "OrderId", "ProductId", "Quantity" },
+                values: new object[,]
+                {
+                    { 1, 1, 1, 1 },
+                    { 2, 1, 3, 2 },
+                    { 3, 2, 2, 1 },
+                    { 4, 2, 5, 3 },
+                    { 5, 3, 4, 1 },
+                    { 6, 3, 7, 1 },
+                    { 7, 4, 6, 2 },
+                    { 8, 4, 1, 1 },
+                    { 9, 5, 3, 1 },
+                    { 10, 5, 2, 2 },
+                    { 11, 6, 7, 1 },
+                    { 12, 6, 5, 1 },
+                    { 13, 7, 4, 1 },
+                    { 14, 7, 6, 2 },
+                    { 15, 7, 1, 1 }
+                });
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DeleteData(
+                table: "OrderProduct",
+                keyColumn: "OrderProductId",
+                keyValue: 1);
+
+            migrationBuilder.DeleteData(
+                table: "OrderProduct",
+                keyColumn: "OrderProductId",
+                keyValue: 2);
+
+            migrationBuilder.DeleteData(
+                table: "OrderProduct",
+                keyColumn: "OrderProductId",
+                keyValue: 3);
+
+            migrationBuilder.DeleteData(
+                table: "OrderProduct",
+                keyColumn: "OrderProductId",
+                keyValue: 4);
+
+            migrationBuilder.DeleteData(
+                table: "OrderProduct",
+                keyColumn: "OrderProductId",
+                keyValue: 5);
+
+            migrationBuilder.DeleteData(
+                table: "OrderProduct",
+                keyColumn: "OrderProductId",
+                keyValue: 6);
+
+            migrationBuilder.DeleteData(
+                table: "OrderProduct",
+                keyColumn: "OrderProductId",
+                keyValue: 7);
+
+            migrationBuilder.DeleteData(
+                table: "OrderProduct",
+                keyColumn: "OrderProductId",
+                keyValue: 8);
+
+            migrationBuilder.DeleteData(
+                table: "OrderProduct",
+                keyColumn: "OrderProductId",
+                keyValue: 9);
+
+            migrationBuilder.DeleteData(
+                table: "OrderProduct",
+                keyColumn: "OrderProductId",
+                keyValue: 10);
+
+            migrationBuilder.DeleteData(
+                table: "OrderProduct",
+                keyColumn: "OrderProductId",
+                keyValue: 11);
+
+            migrationBuilder.DeleteData(
+                table: "OrderProduct",
+                keyColumn: "OrderProductId",
+                keyValue: 12);
+
+            migrationBuilder.DeleteData(
+                table: "OrderProduct",
+                keyColumn: "OrderProductId",
+                keyValue: 13);
+
+            migrationBuilder.DeleteData(
+                table: "OrderProduct",
+                keyColumn: "OrderProductId",
+                keyValue: 14);
+
+            migrationBuilder.DeleteData(
+                table: "OrderProduct",
+                keyColumn: "OrderProductId",
+                keyValue: 15);
+
+            migrationBuilder.DeleteData(
+                table: "Order",
+                keyColumn: "OrderId",
+                keyValue: 1);
+
+            migrationBuilder.DeleteData(
+                table: "Order",
+                keyColumn: "OrderId",
+                keyValue: 2);
+
+            migrationBuilder.DeleteData(
+                table: "Order",
+                keyColumn: "OrderId",
+                keyValue: 3);
+
+            migrationBuilder.DeleteData(
+                table: "Order",
+                keyColumn: "OrderId",
+                keyValue: 4);
+
+            migrationBuilder.DeleteData(
+                table: "Order",
+                keyColumn: "OrderId",
+                keyValue: 5);
+
+            migrationBuilder.DeleteData(
+                table: "Order",
+                keyColumn: "OrderId",
+                keyValue: 6);
+
+            migrationBuilder.DeleteData(
+                table: "Order",
+                keyColumn: "OrderId",
+                keyValue: 7);
+
+            migrationBuilder.DeleteData(
+                table: "Product",
+                keyColumn: "ProductId",
+                keyValue: 1);
+
+            migrationBuilder.DeleteData(
+                table: "Product",
+                keyColumn: "ProductId",
+                keyValue: 2);
+
+            migrationBuilder.DeleteData(
+                table: "Product",
+                keyColumn: "ProductId",
+                keyValue: 3);
+
+            migrationBuilder.DeleteData(
+                table: "Product",
+                keyColumn: "ProductId",
+                keyValue: 4);
+
+            migrationBuilder.DeleteData(
+                table: "Product",
+                keyColumn: "ProductId",
+                keyValue: 5);
+
+            migrationBuilder.DeleteData(
+                table: "Product",
+                keyColumn: "ProductId",
+                keyValue: 6);
+
+            migrationBuilder.DeleteData(
+                table: "Product",
+                keyColumn: "ProductId",
+                keyValue: 7);
+
+            migrationBuilder.DeleteData(
+                table: "Customer",
+                keyColumn: "CustomerId",
+                keyValue: 1);
+
+            migrationBuilder.DeleteData(
+                table: "Customer",
+                keyColumn: "CustomerId",
+                keyValue: 2);
+
+            migrationBuilder.DeleteData(
+                table: "Customer",
+                keyColumn: "CustomerId",
+                keyValue: 3);
+
+            migrationBuilder.DeleteData(
+                table: "Customer",
+                keyColumn: "CustomerId",
+                keyValue: 4);
+
+            migrationBuilder.DeleteData(
+                table: "Customer",
+                keyColumn: "CustomerId",
+                keyValue: 5);
+        }
+    }
+}
