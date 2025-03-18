@@ -25,3 +25,18 @@ Implement primary keys and composite keys where necessary.
 SQL Query Logging: Enable logging to capture and display the actual SQL queries executed by LINQ queries in the console or logs.
 ![day2_1](/img/day2_1.png)
 
+## Day 5
+![day5_1](/img/day5_1.png)
+![day5_2](/img/day5_2.png)
+![day5_3](/img/day5_3.png)
+![day5_4](/img/day5_4.png)
+![day5_5](/img/day5_5.png)
+![day5_6](/img/day5_6.png)
+![day5_7](/img/day5_7.png)
+![day5_8](/img/day5_8.png)
+![day5_9](/img/day5_9.png)
+![day5_10](/img/day5_10.png)
+![day5_11](/img/day5_11.png)
+![day5_12](/img/day5_12.png)
+
+
